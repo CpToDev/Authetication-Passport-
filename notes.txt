@@ -1,0 +1,16 @@
+Level 2 :security was to use mongoose-encryption
+userSchema.plugin(encrypt, { secret: process.env.SECRET, encryptedFields: ['password'] });
+
+then simplpy on saving the password it will encrypt it and on finding it it will sim,ply decrypt it
+
+Main reason of weakness is that if anyone gets the key they can easily decrypt it 
+
+we used process.env.SECRET using dontenv package 
+
+Level 3: using hashing md5 package which simply checks login password's hash value with the registered password's hash value 
+
+
+
+using passport 
+
+npm i passport passport-local passport-local-mongoose express-session
